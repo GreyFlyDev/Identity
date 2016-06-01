@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Identity.Controllers
 {
-    [Authorize]//Now All methods in controller require log in
+    [Authorize(Users = "gflynn", Roles ="User") ]//You can Specify Specific roles or users in Tag
     public class SecretController : Controller
     {
         // GET: Secret
