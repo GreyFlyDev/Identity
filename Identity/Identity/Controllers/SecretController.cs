@@ -15,6 +15,7 @@ namespace Identity.Controllers
             return Content("This is a secret");
         }
 
+        [AllowAnonymous]//Overrides the previous [Authorize] tag
         public ContentResult Overt()
         {
             return Content("This is public");
