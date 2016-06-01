@@ -9,6 +9,7 @@ namespace Identity.Controllers
     public class SecretController : Controller
     {
         // GET: Secret
+        [Authorize]//Makes sure you have an Identity ie.(logged in)
         public ContentResult Index()
         {
             return Content("This is a secret");
